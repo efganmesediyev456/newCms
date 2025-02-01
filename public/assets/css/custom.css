@@ -1,0 +1,214 @@
+.dataTable thead th, .dataTable tbody td:not(.dt-empty) {
+    text-align: left !important;
+}
+
+.loading {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 99999;
+    background: rgba(6, 6, 6, 0.4);
+}
+
+
+/*//select2*/
+.select2-container {
+    width: 100% !important;
+}
+
+.select2-container--default .select2-selection--single {
+    border: 1px solid #e8ebf3 !important;
+    height: 35px !important;
+}
+
+.select2-container--default .select2-selection--single .select2-selection__rendered {
+    color: #444;
+    line-height: 35px !important;
+    height: 35px !important;
+}
+
+.select2-dropdown {
+    border: 1px solid #e8ebf3 !important;
+}
+
+
+/*show page*/
+
+.vehicle-details {
+    font-family: Arial, sans-serif;
+    margin: 20px;
+
+}
+
+
+
+.detail-row {
+    display: flex;
+    margin-bottom: 10px;
+    align-items: start;
+}
+
+.detail-label {
+    font-weight: bold;
+    /*width: 300px;*/
+    text-align: left;
+    padding-right: 20px;
+    flex: 1;
+    font-size: 12px;
+}
+
+.detail-value {
+    flex: 1;
+    text-align: left;
+}
+.vehicle-details .row .col-lg, .vehicle-details .row .col-lg-4{
+    border-right:1px solid  #e4e1e1;
+}
+.vehicle-details .row .col-lg:nth-child(3n){
+    border-right:none;
+}
+@media(max-width: 900px){
+    .vehicle-details .row .col-lg, .vehicle-details .row .col-lg-4{
+        border-right:none;
+    }
+}
+
+.except_detail {
+    border: 1px solid #e4e1e1;
+    border-radius: 8px;
+    margin-bottom: 12px;
+}
+
+.except_detail p {
+    padding: 12px;
+    padding-bottom: 0;
+}
+
+
+/*datepicker */
+.datepicker td, .datepicker th {
+    padding: 6px !important;
+}
+
+input[type="date"]::-webkit-calendar-picker-indicator {
+    display: none; /* Hides the date picker icon */
+    -moz-appearance: textfield; /* Removes the calendar icon in Firefox */
+    appearance: none; /* Removes browser default appearance in some browsers */
+    cursor: pointer !important;
+}
+
+/*header breadcrumb*/
+
+.headerBreadcrumb {
+    background: #edf3f7;
+    padding: 0 24px;
+    border-top-left-radius: 4px;
+    border-top-right-radius: 4px;
+}
+
+.textCenter {
+    background: #edf3f7;
+    padding: 20px 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 6px;
+}
+
+.textCenter span {
+    width: 20px;
+    height: 20px;
+    border: 1px solid #1f77a6;
+    display: inline-flex;
+    border-radius: 100%;
+    background: #1f77a6;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    font-size: 10px;
+}
+
+.marginCityNumber {
+    padding-left: 12px;
+}
+
+.plusIcon {
+    font-size: 10px;
+}
+
+.cardTopRadius {
+    border-top-left-radius: 0 !important;
+    border-top-right-radius: 0 !important;
+}
+
+hr {
+    margin: 25px 0 !important;
+}
+
+.detail-value img {
+    border-radius: 4px;
+}
+
+.fa.fa-save {
+    margin-right: 4px;
+}
+
+
+/*yol vereqesi*/
+.withdrawalButtonDatatable i {
+    font-size: 10px
+}
+
+.withdrawalButtonDatatable span {
+    margin-top: 2px;
+}
+
+#filterAjaxForm label, #filterAjaxForm input {
+    width: max-content;
+}
+
+#filterAjaxForm select {
+    width: 200px;
+}
+
+#datatable th span {
+    width: max-content !important;
+    display: inline-block;
+}
+
+.lastColumnRowsDatatable {
+    width: max-content !important;
+    display: flex;
+}
+
+.disabled {
+    opacity: 1;
+    pointer-events: none;
+    cursor: not-allowed;
+    background-color: #f1f5fa;
+}
+
+.table td, .table p{
+    font-weight: 300;
+}
+
+#equipmentPurchaseAcquiredExtra{
+    display:none;
+}
+
+.hideServiceQuestionElement, #hideServiceQuestionElementSelect{
+    display:none;
+}
+.showElement{
+    display: block!important;
+}
+
+
+.dt-scroll-body{
+    border:unset!important;
+}
