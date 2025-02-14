@@ -47,8 +47,8 @@ class CustomerSaveRequest extends FormRequest
             'responsible_persons.required' => 'Məsul şəxslər mütləq olmalıdır.',
             'customer_type.required' => 'Müştəri növü mütləq seçilməlidir.',
             'customer_source_id.required' => 'Mənbə mütləq seçilməlidir.',
-            'files.*.file' => 'Yüklənən sənəd düzgün formatda olmalıdır.',
-            'files.*.mimes' => 'Yüklənən sənəd yalnız PDF, Word (doc, docx), Excel (xls, xlsx) formatları olmalıdır.',
+            'files.*.file' => 'Yüklənən müqavilə düzgün formatda olmalıdır.',
+            'files.*.mimes' => 'Yüklənən müqavilə yalnız PDF, Word (doc, docx), Excel (xls, xlsx) formatları olmalıdır.',
         ];
     }
 }

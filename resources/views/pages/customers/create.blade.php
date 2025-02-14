@@ -79,7 +79,7 @@
 
                             <div class="col-lg-6">
                                 <div class="form-group mb-3">
-                                    <label for="images" class="mb-1">Yeni Fayllar əlavə et</label>
+                                    <label for="images" class="mb-1">Müqavilələr</label>
                                     <input type="file" name="files[]" class="form-control" multiple>
                                 </div>
                             </div>

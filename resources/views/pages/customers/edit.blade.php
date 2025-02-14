@@ -123,12 +123,12 @@
                             </div>
                             <div class="col-lg-6">
                                 <div class="form-group mb-3">
-                                    <label for="images" class="mb-1">Yeni Fayllar əlavə et</label>
+                                    <label for="images" class="mb-1">Yeni müqavilələr əlavə et</label>
                                     <input type="file" name="files[]" class="form-control" multiple>
                                 </div>
                             </div>
                             <div class="col-lg-12 mb-3">
-                                <label class="mb-1">Mövcud Fayllar</label>
+                                <label class="mb-1">Mövcud müqavilələr</label>
                                 <div class="row" id="existing-images">
                                     @foreach($item->media as $media)
                                         <div class="image-box text-center" data-id="{{ $media->id }}">
@@ -175,7 +175,7 @@
 
         Swal.fire({
             title: "Əminsiniz?",
-            text: "Bu faylı silmək istədiyinizə əminsiniz?",
+            text: "Bu müqaviləni silmək istədiyinizə əminsiniz?",
             icon: "warning",
             showCancelButton: true,
             confirmButtonColor: "#d33",
@@ -201,7 +201,7 @@
 
                             Swal.fire({
                                 title: "Silindi!",
-                                text: "Şəkil uğurla silindi.",
+                                text: "Müqavilə uğurla silindi.",
                                 icon: "success",
                                 timer: 2000,
                                 showConfirmButton: false
@@ -209,7 +209,7 @@
                         } else {
                             Swal.fire({
                                 title: "Xəta!",
-                                text: "Şəkil silinərkən xəta baş verdi.",
+                                text: "Müqavilə silinərkən xəta baş verdi.",
                                 icon: "error",
                                 timer: 2000,
                                 showConfirmButton: false
