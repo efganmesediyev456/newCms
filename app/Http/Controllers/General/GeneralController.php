@@ -6,6 +6,7 @@ use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
 use Yajra\DataTables\DataTables;
 use App\Models\Brand;
+use App\Models\Media;
 use DB;
 
 class GeneralController extends Controller
@@ -31,5 +32,19 @@ class GeneralController extends Controller
        }catch(\Exception $e){
            return $this->responseMessage('error', $e->getMessage(), null, 404);
        }
+    }
+
+
+    public function deleteFile(Request $request)
+    {
+        $media = Media::find($request->id);
+
+        if ($media) {
+            unlink(public_path('/storage/'.$media->file_path)); 
+            $media->delete();
+            return response()->json(['success' => true]);
+        }
+
+        return response()->json(['success' => false]);
     }
 }

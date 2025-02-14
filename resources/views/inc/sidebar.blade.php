@@ -19,6 +19,13 @@
         </li>
 
         <li class="nav-item">
+            <a class="nav-link" href="{{ route('customers.index') }}">
+            <i class="ti ti-user fs-5 menu-icon"></i> 
+            <span>Müştərilər</span>
+            </a>
+        </li>
+
+        <li class="nav-item">
             <a class="nav-link" href="#sidebarAnalytics" data-bs-toggle="collapse" role="button" aria-expanded="false" aria-controls="sidebarAnalytics">
                 <i class="ti ti-settings menu-icon fs-5"></i>
                 <span>Tənzimləmələr</span>
@@ -40,6 +47,11 @@
                             <i class="ti ti-map-pin menu-icon fs-5"></i> Mənbə
                         </a>
                     </li><!--end nav-item-->
+                    <li class="nav-item">
+                        <a href="{{ route('customer_sources.index') }}" class="nav-link">
+                            <i class="ti ti-database menu-icon fs-5"></i> Müştəri mənbələri
+                        </a>
+                    </li>
                 </ul><!--end nav-->
             </div><!--end sidebarAnalytics-->
         </li>

@@ -6,7 +6,10 @@ use App\Http\Controllers\Regulations\OrderStatusController;
 use App\Http\Controllers\Regulations\SourceController;
 use App\Http\Controllers\Orders\OrderController;
 use Illuminate\Support\Facades\Route;
-
+use App\Http\Controllers\Customers\CustomerSourceController;
+use App\Http\Controllers\Customers\CustomerController;
+use App\Http\Controllers\General\GeneralController;
+use App\Http\Controllers\General\MediaController;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -71,6 +74,33 @@ Route::middleware('auth')->group(function () {
         Route::delete('/delete/{brand}', [OrderController::class, 'delete'])->name('delete');
         Route::get('data', [OrderController::class, 'getData'])->name('datatable');
         Route::get('/show/{item}', [OrderController::class,'show'])->name('show');
-
     });
+
+    //customer_sources
+    Route::prefix('customer_sources')->as('customer_sources.')->group(function() {
+        Route::get('/', [CustomerSourceController::class, 'index'])->name('index');
+        Route::get('/create', [CustomerSourceController::class, 'create'])->name('create');
+        Route::post('/create', [CustomerSourceController::class, 'store'])->name('store');
+        Route::get('/edit/{brand}', [CustomerSourceController::class, 'edit'])->name('edit');
+        Route::put('/update/{brand}', [CustomerSourceController::class, 'update'])->name('update');
+        Route::delete('/delete/{brand}', [CustomerSourceController::class, 'delete'])->name('delete');
+        Route::get('data', [CustomerSourceController::class, 'getData'])->name('datatable');
+        Route::get('/show/{item}', [CustomerSourceController::class,'show'])->name('show');
+    });
+
+    
+    //customers
+    Route::prefix('customers')->as('customers.')->group(function() {
+        Route::get('/', [CustomerController::class, 'index'])->name('index');
+        Route::get('/create', [CustomerController::class, 'create'])->name('create');
+        Route::post('/create', [CustomerController::class, 'store'])->name('store');
+        Route::get('/edit/{brand}', [CustomerController::class, 'edit'])->name('edit');
+        Route::put('/update/{brand}', [CustomerController::class, 'update'])->name('update');
+        Route::delete('/delete/{brand}', [CustomerController::class, 'delete'])->name('delete');
+        Route::get('data', [CustomerController::class, 'getData'])->name('datatable');
+        Route::get('/show/{item}', [CustomerController::class,'show'])->name('show');
+    });
+
+    Route::post('/media/delete', [GeneralController::class, 'deleteFile'])->name('media.delete');
+
 });
