@@ -84,6 +84,71 @@
                                 </div>
                             </div>
 
+                            <div class="col-lg-12">
+                                <h4>Rekvizit</h4>
+                                <hr>
+                            </div>
+
+                            <div class="col-lg-6">
+                                <div class="form-group mb-3">
+                                    <label for="" class="mb-1">Vöen</label>
+                                    <input type="text" name="requisite[voen]" class="form-control">
+                                </div>
+                            </div>
+                            <div class="col-lg-6">
+                                <div class="form-group mb-3">
+                                    <label for="" class="mb-1">Hüquqi ünvan</label>
+                                    <input type="text" name="requisite[legal_address]" class="form-control">
+                                </div>
+                            </div>
+                            <div class="col-lg-6">
+                                <div class="form-group mb-3">
+                                    <label for="" class="mb-1">Faktiki ünvan</label>
+                                    <input type="text" name="requisite[actual_address]" class="form-control">
+                                </div>
+                            </div>
+                            <div class="col-lg-6">
+                                <div class="form-group mb-3">
+                                    <label for="" class="mb-1">Bank</label>
+                                    <input type="text" name="requisite[bank]" class="form-control">
+                                </div>
+                            </div>
+                            <div class="col-lg-6">
+                                <div class="form-group mb-3">
+                                    <label for="" class="mb-1">Bank vöeni</label>
+                                    <input type="text" name="requisite[bank_voen]" class="form-control">
+                                </div>
+                            </div>
+                            <div class="col-lg-6">
+                                <div class="form-group mb-3">
+                                    <label for="" class="mb-1">Kod</label>
+                                    <input type="text" name="requisite[code]" class="form-control">
+                                </div>
+                            </div>
+                            <div class="col-lg-6">
+                                <div class="form-group mb-3">
+                                    <label for="" class="mb-1">Hesablama hesabı</label>
+                                    <input type="text" name="requisite[settlement_account]" class="form-control">
+                                </div>
+                            </div>
+                            <div class="col-lg-6">
+                                <div class="form-group mb-3">
+                                    <label for="" class="mb-1">Müxbir hesab</label>
+                                    <input type="text" name="requisite[correspondent_account]" class="form-control">
+                                </div>
+                            </div>
+                            <div class="col-lg-6">
+                                <div class="form-group mb-3">
+                                    <label for="" class="mb-1">Swift</label>
+                                    <input type="text" name="requisite[swift]" class="form-control">
+                                </div>
+                            </div>
+                            <div class="col-lg-6">
+                                <div class="form-group mb-3">
+                                    <label for="" class="mb-1">Direktor</label>
+                                    <input type="text" name="requisite[director]" class="form-control">
+                                </div>
+                            </div>
 
                         </div>
                         <div class="row">
@@ -101,4 +166,3 @@
     </div><!--end row-->
 
 @endsection
-

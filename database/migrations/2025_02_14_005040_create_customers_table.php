@@ -24,6 +24,9 @@ return new class extends Migration
             $table->tinyInteger("status")->default(1);
             $table->unsignedBigInteger("customer_source_id")->nullable();
             $table->foreign("customer_source_id")->references('id')->on('customer_sources')->onDelete('set null');
+            $table->unsignedBigInteger('requisite_id')->nullable();
+            $table->foreign('requisite_id')->references('id')->on('requisites')->onDelete('set null');
+
             $table->timestamps();
             $table->softDeletes();
         });

@@ -19,10 +19,20 @@ class Customer extends Model
         'responsible_persons',
         'customer_type',
         'customer_source_id',
+        'requisite_id',
         'status',
     ];
 
     public function media() {
         return $this->morphMany(Media::class, 'mediable');
+    }
+
+    public function requisite()
+    {
+        return $this->belongsTo(Requisite::class);
+    }
+
+    public function customerSource(){
+        return $this->belongsTo(CustomerSource::class);
     }
 }

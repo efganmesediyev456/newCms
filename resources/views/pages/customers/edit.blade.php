@@ -121,33 +121,124 @@
                                     </select>
                                 </div>
                             </div>
-                            <div class="col-lg-6">
-                                <div class="form-group mb-3">
-                                    <label for="images" class="mb-1">Yeni müqavilələr əlavə et</label>
-                                    <input type="file" name="files[]" class="form-control" multiple>
-                                </div>
-                            </div>
-                            <div class="col-lg-12 mb-3">
-                                <label class="mb-1">Mövcud müqavilələr</label>
-                                <div class="row" id="existing-images">
-                                    @foreach($item->media as $media)
-                                        <div class="image-box text-center" data-id="{{ $media->id }}">
-                                            <span style="word-break: break-all;">{{ basename($media->file_path) }}</span>
-                                            <a target="_blank" href="{{ asset('/storage/'.$media->file_path) }}" class="btn btn-success btn-sm">
-                                                <i class="fas fa-eye"></i> Bax
-                                            </a>
-                                            <button type="button" class="btn btn-danger btn-sm delete-image">
-                                                <i class="fas fa-trash"></i> Sil
-                                            </button>
-                                        </div>
-                                    @endforeach
-                                </div>
-                            </div>
+                           
+                         
 
                             
                             
 
                         </div>
+
+                        <div class="mt-2 card">
+                            <div class="card-header">
+                                <h5 class="card-title">Requisite Məlumatları</h5>
+                            </div>
+                            <div class="card-body">
+                                <div class="row">
+                                    <div class="col-lg-6">
+                                        <div class="form-group mb-3">
+                                            <label for="" class="mb-1">Requisite Vöen</label>
+                                            <input type="text" name="requisite[voen]" class="form-control" 
+                                                value="{{ $item->requisite->voen ?? '' }}">
+                                        </div>
+                                    </div>
+                                    <div class="col-lg-6">
+                                        <div class="form-group mb-3">
+                                            <label for="" class="mb-1">Hüquqi Ünvan</label>
+                                            <input type="text" name="requisite[legal_address]" class="form-control" 
+                                                value="{{ $item->requisite->legal_address ?? '' }}">
+                                        </div>
+                                    </div>
+                                    <div class="col-lg-6">
+                                        <div class="form-group mb-3">
+                                            <label for="" class="mb-1">Faktiki Ünvan</label>
+                                            <input type="text" name="requisite[actual_address]" class="form-control" 
+                                                value="{{ $item->requisite->actual_address ?? '' }}">
+                                        </div>
+                                    </div>
+                                    <div class="col-lg-6">
+                                        <div class="form-group mb-3">
+                                            <label for="" class="mb-1">Bank</label>
+                                            <input type="text" name="requisite[bank]" class="form-control" 
+                                                value="{{ $item->requisite->bank ?? '' }}">
+                                        </div>
+                                    </div>
+                                    <div class="col-lg-6">
+                                        <div class="form-group mb-3">
+                                            <label for="" class="mb-1">Bank Vöen</label>
+                                            <input type="text" name="requisite[bank_voen]" class="form-control" 
+                                                value="{{ $item->requisite->bank_voen ?? '' }}">
+                                        </div>
+                                    </div>
+                                    <div class="col-lg-6">
+                                        <div class="form-group mb-3">
+                                            <label for="" class="mb-1">Kod</label>
+                                            <input type="text" name="requisite[code]" class="form-control" 
+                                                value="{{ $item->requisite->code ?? '' }}">
+                                        </div>
+                                    </div>
+                                    <div class="col-lg-6">
+                                        <div class="form-group mb-3">
+                                            <label for="" class="mb-1">Hesablaşma Hesabı</label>
+                                            <input type="text" name="requisite[settlement_account]" class="form-control" 
+                                                value="{{ $item->requisite->settlement_account ?? '' }}">
+                                        </div>
+                                    </div>
+                                    <div class="col-lg-6">
+                                        <div class="form-group mb-3">
+                                            <label for="" class="mb-1">Müxbir Hesab</label>
+                                            <input type="text" name="requisite[correspondent_account]" class="form-control" 
+                                                value="{{ $item->requisite->correspondent_account ?? '' }}">
+                                        </div>
+                                    </div>
+                                    <div class="col-lg-6">
+                                        <div class="form-group mb-3">
+                                            <label for="" class="mb-1">SWIFT</label>
+                                            <input type="text" name="requisite[swift]" class="form-control" 
+                                                value="{{ $item->requisite->swift ?? '' }}">
+                                        </div>
+                                    </div>
+                                    <div class="col-lg-6">
+                                        <div class="form-group mb-3">
+                                            <label for="" class="mb-1">Requisite Direktor</label>
+                                            <input type="text" name="requisite[director]" class="form-control" 
+                                                value="{{ $item->requisite->director ?? '' }}">
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="card">
+                            <div class="card-header">
+                                     <label class="mb-1">Mövcud müqavilələr</label>
+                            </div>
+                            <div class="card-body">
+                                <div class="col-lg-12 mb-3">
+                                    <div class="row" id="existing-images">
+                                        @foreach($item->media as $media)
+                                            <div class="image-box text-center" data-id="{{ $media->id }}">
+                                                <span style="word-break: break-all;">{{ basename($media->file_path) }}</span>
+                                                <a target="_blank" href="{{ asset('/storage/'.$media->file_path) }}" class="btn btn-success btn-sm">
+                                                    <i class="fas fa-eye"></i> Bax
+                                                </a>
+                                                <button type="button" class="btn btn-danger btn-sm delete-image">
+                                                    <i class="fas fa-trash"></i> Sil
+                                                </button>
+                                            </div>
+                                        @endforeach
+                                    </div>
+                                </div>
+                                <div class="col-lg-6">
+                                    <div class="form-group mb-3">
+                                        <label for="images" class="mb-1">Yeni müqavilələr əlavə et</label>
+                                        <input type="file" name="files[]" class="form-control" multiple>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+
                         <div class="row">
                             <div class="form-group d-flex justify-content-end gap-2">
                                 <a type="submit" class="btn btn-outline-danger" href="{{ $route }}"><i class="fa fa-arrow-left"></i> Geri qayıt </a>
